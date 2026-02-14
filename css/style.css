@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6, span {
    color: #242424;
    text-align: center;
@@ -28,6 +32,10 @@ li {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .flex {
     display: flex;
 }
@@ -45,6 +53,7 @@ li {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .text--purple {
@@ -82,6 +91,16 @@ nav {
     color: black;
     text-decoration: none;
     font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav__link--anchor:hover {
+    color: #6030b1;
+}
+
+.nav__link--anchor:focus {
+    outline: 2px solid #6030b1;
+    outline-offset: 2px;
 }
 
 .nav__link--anchor-primary {
@@ -156,6 +175,17 @@ nav {
     text-decoration: none;
     color: #242424;
     padding: 0 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-me__link:hover {
+    color: #6030b1;
+    transform: scale(1.1);
+}
+
+.about-me__link:focus {
+    outline: 2px solid #6030b1;
+    outline-offset: 2px;
 }
 
 .about-me__img--container {
@@ -219,6 +249,14 @@ nav {
 
 /* Projects Section */
 
+.project-list {
+    padding-top: 40px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
 .project__img {
     width: 100%;
     transition: 500ms ease;
@@ -255,8 +293,127 @@ nav {
     filter: blur(5px);
 }
 
-.project__list {
-    padding-top: 40px;
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 450ms ease, transform 450ms ease;
+}
+
+.project:hover .project__description {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para {
+    text-align: left;
+    color: #fff;
+}
+
+.project__description--title {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.project__description--sub-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #d3d3d3;
+}
+
+.project__description--para {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project__description--link {
+    font-size: 24px;
+    margin-right: 16px;
+    color: #fff;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.project__description--link:hover {
+    transform: scale(1.2);
+}
+
+.project__description--link:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    .nav__link--list {
+        margin-top: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .about-me__info {
+        min-height: auto;
+    }
+    
+    .about-me__info--title {
+        font-size: 28px;
+    }
+    
+    .about-me__info--paragraph {
+        font-size: 18px;
+    }
+    
+    .Language__img {
+        width: 50%;
+    }
+    
+    .project__description--title {
+        font-size: 24px;
+    }
+    
+    .project__description--sub-title {
+        font-size: 14px;
+    }
+    
+    .project__description--para {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .personal__logo {
+        font-size: 20px;
+    }
+    
+    .nav__link--anchor {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+    
+    .about-me__info--paragraph {
+        font-size: 16px;
+    }
+    
+    .Language__img {
+        width: 100%;
+    }
 }
 
 
