@@ -249,6 +249,10 @@ nav {
 
 /* Projects Section */
 
+#projects {
+    background-color: #fff;
+}
+
 .project-list {
     padding-top: 40px;
 }
@@ -349,6 +353,76 @@ nav {
     outline-offset: 4px;
 }
 
+/* Contact Section */
+
+#contact {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+.contact__description {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px auto 40px;
+    max-width: 600px;
+    color: #242424;
+}
+
+.contact__links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #242424;
+    text-decoration: none;
+    min-width: 120px;
+}
+
+.contact__link i {
+    font-size: 32px;
+    color: #6030b1;
+}
+
+.contact__link span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contact__link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(96, 48, 177, 0.2);
+}
+
+.contact__link:focus {
+    outline: 2px solid #6030b1;
+    outline-offset: 2px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #242424;
+    padding: 30px 0;
+}
+
+.footer__text {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
 /* Responsive Design */
 
 @media (max-width: 768px) {
@@ -391,6 +465,15 @@ nav {
     .project__description--para {
         font-size: 14px;
     }
+    
+    .contact__links {
+        gap: 15px;
+    }
+    
+    .contact__link {
+        padding: 15px 20px;
+        min-width: 100px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -413,6 +496,14 @@ nav {
     
     .Language__img {
         width: 100%;
+    }
+    
+    .contact__description {
+        font-size: 16px;
+    }
+    
+    .contact__links {
+        gap: 10px;
     }
 }
 
