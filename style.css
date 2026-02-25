@@ -311,7 +311,7 @@ nav {
     margin-bottom: 135px;
 }
 
-.project :last-child {
+.project:last-child {
     margin-bottom: 40px;
 }
 
@@ -352,7 +352,7 @@ nav {
 }
 
 
-.project__list {
+.project-list {
     padding-top: 40px;
 }
 
