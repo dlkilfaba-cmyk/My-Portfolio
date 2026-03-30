@@ -1,4 +1,4 @@
-[https://dlkilfaba-cmyk.github.io/My-portfolio/](https://dlkilfaba-cmyk.github.io/My-Portfolio/
+https://dlkilfaba-cmyk.github.io/My-Portfolio/
 # Darren Knuckles – Frontend Developer Portfolio
 
 This repository contains the source code for my personal frontend development portfolio. The purpose of this site is to showcase my technical skills, projects, and ability to build responsive, accessible, and visually clean user interfaces using modern web technologies.
